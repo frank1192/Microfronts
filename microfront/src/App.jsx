@@ -3,12 +3,18 @@ import ReactDOM from "react-dom/client";
 
 import "./index.scss";
 
+import Header from "./components/Header";
+
+import Footer from "./components/Footer";
+import HomeContent from "./components/HomeContent";
+
 const App = () => (
   <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: microfront</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Tailwind</div>
+    <Header/>
+    <div className="home">
+      <HomeContent />
+    </div>
+    <Footer />
   </div>
 );
 const rootElement = document.getElementById("app")

@@ -64,7 +64,9 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "microfront2",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        'components': "microfront@http://localhost:4001/remoteEntry.js",
+      },
       exposes: {},
       shared: {
         ...deps,
